@@ -1,0 +1,45 @@
+#
+# @author     Naval Prashar
+#
+# @date       07-09-2020
+# @file       .vimrc
+# @brief      iota2 reference .vimrc file
+#
+# @attention  iota square [i2]
+#
+# <pre>
+# ██╗ ██████╗ ████████╗ █████╗ ██████╗
+# ██║██╔═══██╗╚══██╔══╝██╔══██╗╚════██╗
+# ██║██║   ██║   ██║   ███████║ █████╔╝
+# ██║██║   ██║   ██║   ██╔══██║██╔═══╝
+# ██║╚██████╔╝   ██║   ██║  ██║███████╗
+# ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝
+# </pre>
+#
+# @copyright   GNU GPU v3
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 3
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# Free Software, Hell Yeah! "
+#
+
+# Following need to be added to the end of ~/.bashrc file
+
+# >>> powerline-shell initialize >>>
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+# <<< powerline-shell initialize <<<
+
